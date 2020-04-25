@@ -1,0 +1,44 @@
+
+.wrapper {
+	max-width: 40rem;
+	margin: 1rem auto;
+}
+
+.pure-menu-list {
+	width: 100%;
+	text-align: center;
+}
+
+.pure-form {
+	margin: 1rem auto;
+	padding: 0 1rem;
+}
+
+input,textarea {
+	width: 100%;
+	margin: 1rem 0;
+	text-align: center;
+}
+
+textarea[readonly] {
+	padding: 2rem;
+}
+
+button {
+	width: 100%;
+	margin: 1rem 0;
+}
+
+.blinking{
+	animation:blinkingText 0.7s infinite;
+	text-align: center;
+	background-color: #00FF0080;
+	padding: 0.5rem;
+}
+@keyframes blinkingText{
+	0%{     color: darkgreen;    }
+	49%{    color: darkgreen; }
+	70%{    color: transparent; }
+	99%{    color:transparent;  }
+	100%{   color: darkgreen;    }
+}

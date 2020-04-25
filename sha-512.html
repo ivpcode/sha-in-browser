@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHA-512 calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Prez Ivan">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/7.0.1/cash.min.js"></script>
+    <script src="./sha.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item pure-u-1-4"><a href="./sha-1.html" class="pure-menu-link">SHA-1</a></li>
+                <li class="pure-menu-item pure-u-1-4"><a href="./sha-256.html" class="pure-menu-link">SHA-256</a></li>
+                <li class="pure-menu-item pure-u-1-4"><a href="./sha-384.html" class="pure-menu-link">SHA-384</a></li>
+                <li class="pure-menu-item pure-u-1-4 pure-menu-selected" class="pure-menu-link"><a href="./sha-512.html" >SHA-512</a></li>
+            </ul>
+        </div>
+
+        <form class="pure-form">
+            <fieldset>
+                <legend>SHA-512 Calculator</legend>
+                <div>
+                    <input id="TXT" type="text" placeholder="Text to hash">
+                </div>
+                <div>
+                    <button class="pure-button pure-button-primary" onclick=" event.preventDefault(); SHA('SHA-512',$('#TXT').val());">Calculate</button>
+                </div>
+            </fieldset>
+        </form>
+        <form class="pure-form result hidden">
+            <fieldset>
+            <legend>Result</legend> </fieldset>
+            <textarea type="text" value="" ></textarea>
+            <div class="blinking hidden">COPIED!</div>
+        </form>
+    </div>
+</body>
+</html>
